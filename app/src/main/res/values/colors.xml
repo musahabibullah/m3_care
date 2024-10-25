@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryColor">#536DFE</color>
+    <color name="primaryDarkColor">#3D5AFE</color>
+    <color name="accentColor">#FF4081</color>
+    <color name="ungu">#BF00FF</color>
+
+
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="secondaryBackgroundColor">#F4F6FA</color>
+    <color name="hijau">#008000</color>
+
+    <color name="black">#333333</color>
+    <color name="primaryTextColor">#333333</color>
+    <color name="secondaryTextColor">#666666</color>
+    <color name="hintTextColor">#999999</color>
+
+
+    <color name="buttonColor">#536DFE</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+
+
+    <color name="iconColor">#333333</color>
+
+
+    <color name="dividerColor">#E0E0E0</color>
+</resources>

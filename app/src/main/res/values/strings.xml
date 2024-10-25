@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Register Application</string>
+
+
+    <string name="register_application">Register Application</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username</string>
+    <string name="id">ID</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="verification_password">Verification Password</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="address">Address</string>
+    <string name="register">Register</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="done">Done</string>
+    <string name="log_in">Log In</string>
+    <string name="or">or</string>
+
+
+    <string name="error_fill_correct_data">Please fill out the correct data.</string>
+    <string name="error_password_mismatch">Passwords do not match.</string>
+    <string name="success_registration">Registration Successful</string>
+
+
+    <string-array name="gender_options">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+
+    <string name="hint_enter_phone_number">Enter your phone number</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="hint_enter_password">Enter a new password</string>
+    <string name="hello_blank_fragment" />
+    <string name="large_image" />
+
+
+    <string-array name="daftar_mahasiswa">
+        <item>Ahmad Fauzi</item>
+        <item>Rina Amalia</item>
+        <item>Nur Hasanah</item>
+        <item>Indra Kusuma</item>
+        <item>Budi Santoso</item>
+        <item>Setyo Hartono</item>
+        <item>Angga Pratama</item>
+        <item>Dewi Lestari</item>
+        <item>Siti Rahmah</item>
+        <item>Farhan Aulia</item>
+        <item>Aliyah Fitri</item>
+        <item>Arif Wibowo</item>
+        <item>Siti Maemunah</item>
+        <item>Wahyu Kurniawan</item>
+        <item>Yusuf Alfarizi</item>
+    </string-array>
+
+</resources>

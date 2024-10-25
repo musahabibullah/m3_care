@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blue" /> <!-- Gambar latar dari drawable -->
+
+    <!-- Tombol SIGN -->
+    <Button
+        android:id="@+id/btnSign"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="559dp"
+        android:background="@drawable/button_background"
+        android:text="SIGN"
+        android:textColor="@android:color/white" />
+
+    <!-- Tombol REGISTER -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="154dp"
+        android:layout_height="49dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="623dp"
+        android:background="@drawable/button_background"
+        android:text="REGISTER"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

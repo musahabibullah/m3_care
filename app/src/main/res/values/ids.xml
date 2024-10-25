@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvRegister" type="id" />
+    <item name="etTanggalLahir" type="id" />
+    <item name="tvTitle" type="id" />
+    <item name="etFullname" type="id" />
+    <item name="etUsername" type="id" />
+    <item name="etId" type="id" />
+    <item name="etEmail" type="id" />
+    <item name="etPassword" type="id" />
+    <item name="etVerificationPassword" type="id" />
+    <item name="tvGenderLabel" type="id" />
+    <item name="spinnerGender" type="id" />
+    <item name="etAlamat" type="id" />
+    <item name="btnRegister" type="id" />
+</resources>

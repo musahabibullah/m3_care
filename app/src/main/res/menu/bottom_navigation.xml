@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fr_home"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/fr_healthrecord"
+        android:icon="@drawable/rekamkesehatan"
+        android:title="Rekamkesehatan"/>
+
+    <item
+        android:id="@+id/fr_reminder"
+        android:icon="@drawable/reminder"
+        android:title="Reminder"/>
+
+    <item
+        android:id="@+id/fr_stockobat"
+        android:icon="@drawable/stockobat"
+        android:title="StockObat"/>
+
+    <item
+        android:id="@+id/fr_profil"
+        android:icon="@drawable/account"
+        android:title="Profile"/>
+
+
+
+
+
+</menu>
