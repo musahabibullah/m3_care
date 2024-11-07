@@ -12,11 +12,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 
+import com.kelompok4.fragmentbutton.ProfileFragment;
 import com.kelompok4.fragmentbutton.R;
 import com.kelompok4.fragmentbutton.fragment.HomeFragment;
 import com.kelompok4.fragmentbutton.fragment.ReminderFragment;
-import com.kelompok4.fragmentbutton.fragment.ProfilFragment;
-import com.kelompok4.fragmentbutton.fragment.RequestSuratDokterFragment;
+import com.kelompok4.fragmentbutton.fragment.SuratIzinSakitFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 
@@ -49,15 +49,15 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         int selected = item.getItemId();
 
         if (selected == R.id.fr_healthrecord) {
-            fragment = new RequestSuratDokterFragment();
+            fragment = new SuratIzinSakitFragment();
         } else if (selected == R.id.fr_home) {
             fragment = new HomeFragment();
         } else if (selected == R.id.fr_reminder) {
             fragment = new ReminderFragment();
         } else if (selected == R.id.fr_stockobat) {
             fragment = new HomeFragment();
-        } else {
-            fragment = new ProfilFragment();
+        } else if (item.getItemId() == R.id.fr_profil) { // Ensure this ID matches the one in your menu resource
+            fragment = new ProfileFragment();
         }
 
 

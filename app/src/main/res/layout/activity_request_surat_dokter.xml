@@ -40,13 +40,14 @@
         android:hint="Pertolongan Pertama"
         android:inputType="textMultiLine" />
 
-    <EditText
-        android:id="@+id/etTanggal"
+    <!-- Button untuk memilih tanggal dan waktu -->
+    <Button
+        android:id="@+id/btnTanggal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tanggal"
-        android:inputType="date" />
+        android:text="Pilih Tanggal dan Waktu" />
 
+    <!-- Button untuk mengirim permintaan -->
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
