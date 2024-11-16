@@ -12,6 +12,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -60,7 +64,7 @@ public class SuratIzinFragment extends Fragment {
         // Set listener untuk button
         btnRequest.setOnClickListener(v -> {
             if (validateInputs()) {
-                sendRequest();
+                showConfirmationDialog();
             }
         });
 
@@ -68,6 +72,7 @@ public class SuratIzinFragment extends Fragment {
     }
 
     private boolean validateInputs() {
+        // Validasi input lainnya
         if (etNis.getText().toString().isEmpty() ||
                 etNama.getText().toString().isEmpty() ||
                 etKelas.getText().toString().isEmpty() ||
@@ -79,7 +84,36 @@ public class SuratIzinFragment extends Fragment {
             Toast.makeText(getContext(), "Semua field harus diisi!", Toast.LENGTH_SHORT).show();
             return false;
         }
+
+        // Validasi Suhu (harus antara 30°C hingga 45°C)
+        String suhuStr = etSuhu.getText().toString();
+        try {
+            float suhu = Float.parseFloat(suhuStr);
+            if (suhu < 30 || suhu > 45) {
+                Toast.makeText(getContext(), "Suhu tidak valid. Harap masukkan suhu antara 30°C hingga 45°C.", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            Toast.makeText(getContext(), "Suhu harus berupa angka yang valid.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
         return true;
+    }
+
+    private void showConfirmationDialog() {
+        new AlertDialog.Builder(getContext())
+                .setTitle("Konfirmasi Pengisian Form")
+                .setMessage("Apakah anda sudah yakin telah mengisi form dengan benar?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        sendRequest(); // Kirim data ke server jika memilih "Ya"
+                        showThankYouDialog();  // Menampilkan pesan terimakasih
+                    }
+                })
+                .setNegativeButton("Tidak", null) // Membatalkan jika memilih "Tidak"
+                .show();
     }
 
     private void sendRequest() {
@@ -136,5 +170,36 @@ public class SuratIzinFragment extends Fragment {
 
         RequestQueue requestQueue = Volley.newRequestQueue(requireContext());
         requestQueue.add(stringRequest);
+    }
+
+    private void showThankYouDialog() {
+        // Inflate the custom dialog layout
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View dialogView = inflater.inflate(R.layout.dialog_thank_you, null);
+
+        // Create and show the dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setView(dialogView);
+        builder.setCancelable(false); // Disable dismiss by outside touch
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        // Optional: Add some animation (e.g., fade in)
+        dialog.getWindow().getAttributes().windowAnimations = android.R.style.Animation_Dialog;
+
+        // Find the ImageView and TextView from the dialog layout
+        ImageView ivCheck = dialogView.findViewById(R.id.ivCheck);
+        TextView tvThankYou = dialogView.findViewById(R.id.tvThankYou);
+
+        // Add any animation to the elements if needed
+        ivCheck.setAlpha(0f); // Start with invisible
+        tvThankYou.setAlpha(0f); // Start with invisible
+
+        ivCheck.animate().alpha(1f).setDuration(800); // Fade in the checkmark
+        tvThankYou.animate().alpha(1f).setDuration(800).setStartDelay(300); // Fade in the text with delay
+
+        // Optionally, dismiss the dialog after a few seconds (for user experience)
+        new android.os.Handler().postDelayed(dialog::dismiss, 3000);
     }
 }

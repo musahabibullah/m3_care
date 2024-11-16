@@ -3,76 +3,135 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="#F5F5F5">
 
+    <!-- Title or Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Form Status Kesehatan Siswa"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="#2C3E50"/>
+
+    <!-- NIS Input -->
     <EditText
         android:id="@+id/etNis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="NIS" />
+        android:hint="NIS"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
 
+    <!-- Name Input -->
     <EditText
         android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama" />
+        android:hint="Nama"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
 
+    <!-- Class Input -->
     <EditText
         android:id="@+id/etKelas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Kelas" />
+        android:hint="Kelas"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
 
+    <!-- Temperature Input -->
     <EditText
         android:id="@+id/etSuhu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Suhu"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
+
+    <!-- Status (Radio buttons) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status Kesehatan"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:textColor="#34495E" />
 
     <RadioGroup
         android:id="@+id/rgStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <RadioButton
             android:id="@+id/rbSehat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sehat" />
+            android:text="Sehat"
+            android:textColor="#34495E"/>
 
         <RadioButton
             android:id="@+id/rbSakit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sakit" />
+            android:text="Sakit"
+            android:textColor="#34495E"/>
     </RadioGroup>
 
+    <!-- Complaint -->
     <EditText
         android:id="@+id/etKeluhan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Keluhan"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
 
+    <!-- Diagnosis -->
     <EditText
         android:id="@+id/etDiagnosis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Diagnosis"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
 
+    <!-- First Aid -->
     <EditText
         android:id="@+id/etPertolonganPertama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Pertolongan Pertama"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#34495E"/>
 
+    <!-- Submit Button -->
     <Button
         android:id="@+id/btnRequest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Request" />
+        android:text="KIRIM"
+        android:background="#2980B9"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
 </LinearLayout>
