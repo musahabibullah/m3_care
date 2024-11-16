@@ -1,0 +1,23 @@
+<!-- res/menu/bottom_navigation.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fr_home"
+        android:icon="@drawable/house"
+        android:title="Home" />
+    <item
+        android:id="@+id/fr_healthrecord"
+        android:icon="@drawable/healthrecord"
+        android:title="Rekam Kesehatan" />
+    <item
+        android:id="@+id/fr_reminder"
+        android:icon="@drawable/reminderobat"
+        android:title="Reminder" />
+    <item
+        android:id="@+id/fr_stokobat"
+        android:icon="@drawable/stokobat"
+        android:title="Stock Obat" />
+    <item
+        android:id="@+id/fr_profil"
+        android:icon="@drawable/profile"
+        android:title="Profil" />
+</menu>

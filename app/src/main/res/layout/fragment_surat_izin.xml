@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etNis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NIS" />
+
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama" />
+
+    <EditText
+        android:id="@+id/etKelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kelas" />
+
+    <EditText
+        android:id="@+id/etSuhu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Suhu"
+        android:inputType="numberDecimal"/>
+
+    <RadioGroup
+        android:id="@+id/rgStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbSehat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sehat" />
+
+        <RadioButton
+            android:id="@+id/rbSakit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sakit" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etKeluhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Keluhan"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/etDiagnosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Diagnosis"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/etPertolonganPertama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pertolongan Pertama"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request" />
+</LinearLayout>
